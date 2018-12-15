@@ -9,12 +9,10 @@ class Banner extends React.Component {
         return (
             <Carousel>
                 <div>
-                    <img src={vinos} />
-                    <p className="legend">Vinos</p>
+                    <img src={vinos} alt="Vinos"/>
                 </div>
                 <div>
-                    <img src={bebidas} />
-                    <p className="legend">Bebidas</p>
+                    <img src={bebidas} alt="bebidas"/>
                 </div>
             </Carousel>
         )

@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+* {
+    font-family: 'Lato', sans-serif;
+}
 .carousel {
     height: 100%!important;
     .thumbs-wrapper {
         display: none;
     }
 }
-// @media (max-width: 600px) {
-//     .carousel .slide img {
-//         width: 175%;
-//         border: 0;
-//         left: -44%;
-//         position: relative;
-//     }
-// }
+.slider {
+    height: 80vh!important;
+}
+@media (max-width: 1024px) {
+    .slider {
+        height: 100%!important;
+    }
+}
