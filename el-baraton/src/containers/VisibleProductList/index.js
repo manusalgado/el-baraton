@@ -8,8 +8,9 @@ class VisibleProductList extends React.Component {
         this.props.getProducts()
     }
     render(){
+        const {products, isLoading, error} = this.props
         return (
-            <ProductList products={this.props.products} isLoading={this.props.isLoading} error={this.props.error} />
+            <ProductList products={products} isLoading={isLoading} error={error} />
         )
     }
 }

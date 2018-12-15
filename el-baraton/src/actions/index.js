@@ -11,7 +11,7 @@ export const actionsType = {
 export const getProducts = () => dispatch => {
 	dispatch(loading())
 	return axios
-		.get('/data/products.json')
+		.get('data/products.json')
 		.then(response => {
 			console.log(response)
 			dispatch(receiveProducts(response))
