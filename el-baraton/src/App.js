@@ -12,12 +12,12 @@ class App extends Component {
         <Banner />
         <section className="container-fluid">
           <div className="row">
-            <div className="col s12 m9 l9">
-              <VisibleProductList />
-            </div>
-            <aside className="col s12 m3 l3">
+            <aside className="col s12 m3 l3 order-cart">
               <ShoppingCartContainer />
             </aside>
+            <div className="col s12 m9 l9 order-products">
+              <VisibleProductList />
+            </div>
           </div>
         </section>
       </div>

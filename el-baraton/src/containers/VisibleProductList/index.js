@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import ProductList from '../../components/ProductList'
-import { getProducts } from '../../actions'
+import { getProducts, addToCart } from '../../actions'
 import React from 'react'
 
 class VisibleProductList extends React.Component {
@@ -8,9 +8,9 @@ class VisibleProductList extends React.Component {
         this.props.getProducts()
     }
     render(){
-        const {products, isLoading, error} = this.props
+        const {products, isLoading, error, addToCart} = this.props
         return (
-            <ProductList products={products} isLoading={isLoading} error={error} />
+            <ProductList products={products} isLoading={isLoading} error={error} addToCart={addToCart} />
         )
     }
 }
@@ -22,7 +22,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    getProducts: () => dispatch(getProducts())
+    getProducts: () => dispatch(getProducts()),
+    addToCart: (product) => dispatch(addToCart(product))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(VisibleProductList)

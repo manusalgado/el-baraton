@@ -2,6 +2,8 @@ import axios from 'axios'
 
 export const actionsType = {
 	RECEIVE_PRODUCTS: 'RECEIVE_PRODUCTS',
+	ADD_TO_CART: 'ADD_TO_CART',
+	DELETE_PRODUCT: 'DELETE_PRODUCT',
 	LOADING: 'LOADING',
 	ERROR: 'ERROR'
 }
@@ -33,4 +35,18 @@ export const loading = () => {
 
 export const showError = () => {
   return { type: actionsType.ERROR }
+}
+
+export const addToCart = product => {
+  return {
+    type: actionsType.ADD_TO_CART,
+    product
+  }
+}
+
+export const deleteProduct = product => {
+  return {
+    type: actionsType.DELETE_PRODUCT,
+    product
+  }
 }
