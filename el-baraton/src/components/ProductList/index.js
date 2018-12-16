@@ -2,7 +2,7 @@ import React from 'react'
 import { Product } from './styles'
 import vino from '../../assets/images/vino.jpg'
 
-const ProductList = ({products, isLoading, error}) => {
+const ProductList = ({products, isLoading, error, addToCart}) => {
   console.log('products from product list...', products.products)
   
     return (
@@ -28,9 +28,7 @@ const ProductList = ({products, isLoading, error}) => {
                   </div> }
                 </div>
                 <span className="Product__price">Precio: {product.price}</span>
-                <button className="Product__add-cart">Añadir al Carrito</button>
-                available
-                sublevel_id
+                <button className="Product__add-cart" onClick={() => addToCart(product)}>Añadir al Carrito</button>
               </Product>
             </div>
           ))}
