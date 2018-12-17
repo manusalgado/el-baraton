@@ -15,7 +15,7 @@ const ShoppingCart = ({ deleteProduct, products }) => {
             {hasProducts ? products.cart.map(product => (
                 <div className="Wrapper__product-container">
                     <p>{product.name}</p>
-                    <p>{(parseFloat(product.price.substring(1).replace(',', ''))) * product.quantity}</p>
+                    <p>${(parseFloat(product.price.substring(1).replace(',', ''))) * product.quantity}</p>
                     <button onClick={() => deleteProduct(product)}>
                         <img src={deleteIcon} alt="delete" width="17"/>
                     </button>
