@@ -10,12 +10,12 @@ const ShoppingCart = ({ deleteProduct, products }) => {
             <h3>Tus Productos</h3>
             <div className="Wrapper__image">
                 <img src={cart} alt="Cart" width="30" />
-                {hasProducts ? <span>{products.cart.length}</span> : ''}
+                {hasProducts ? <span>{products.cart.reduce((acc, product) => acc + product.quantity, 0)}</span> : ''}
             </div>
             {hasProducts ? products.cart.map(product => (
                 <div className="Wrapper__product-container">
                     <p>{product.name}</p>
-                    <p>{product.price}</p>
+                    <p>{(parseFloat(product.price.substring(1).replace(',', ''))) * product.quantity}</p>
                     <button onClick={() => deleteProduct(product)}>
                         <img src={deleteIcon} alt="delete" width="17"/>
                     </button>
@@ -24,7 +24,7 @@ const ShoppingCart = ({ deleteProduct, products }) => {
             <p className="Wrapper__empty">Carrito vacio</p>}
             <div className="Wrapper__total">
                 <p>Total:</p>
-                <span>${ products.cart.reduce((sum, product) => sum + parseFloat(product.price.substring(1).replace(',','')), 0) }</span>
+                <span>${ products.cart.reduce((sum, product) => sum + (parseFloat(product.price.substring(1).replace(',','')) * product.quantity), 0) }</span>
             </div>
         </Wrapper>
     )
