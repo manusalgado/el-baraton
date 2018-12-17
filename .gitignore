@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log
+test-results.xml
+.DS_Store
+dist
+build/
+*.swp
+componentsIndex.js
+.idea/
+.idea/*
+.vscode
+jsconfig.json
+.env
+log
+yarn-error.log
+junit.xml
