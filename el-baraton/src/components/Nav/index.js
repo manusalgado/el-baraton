@@ -1,5 +1,6 @@
 import React from 'react'
 import 'materialize-css/dist/css/materialize.min.css'
+import { MobileNav } from './styles'
 
 const Nav = ({categories}) => {
     console.log('from nav component', categories)
@@ -15,6 +16,11 @@ const Nav = ({categories}) => {
                 </ul>
             </div>
             </nav>
+            <MobileNav>
+                {categories.map(categorie => (
+                    <li key={categorie.id}><a href="#">{categorie.name}</a></li>
+                ))}
+            </MobileNav>
         </div>
     )
 }
