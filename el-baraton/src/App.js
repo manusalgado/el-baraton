@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Nav from '../src/components/Nav'
+import NavContainer from '../src/containers/NavContainer'
 import Banner from '../src/components/Banner'
 import VisibleProductList from '../src/containers/VisibleProductList'
 import ShoppingCartContainer from '../src/containers/ShoppingCartContainer'
@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav/>
+        <NavContainer/>
         <Banner />
         <section className="container-fluid">
           <div className="row">

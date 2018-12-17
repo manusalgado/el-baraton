@@ -24,7 +24,7 @@ const ShoppingCart = ({ deleteProduct, products }) => {
             <p className="Wrapper__empty">Carrito vacio</p>}
             <div className="Wrapper__total">
                 <p>Total:</p>
-                <span>${ products.cart.reduce((sum, product) => sum + parseFloat(product.price.substring(1)), 0) }</span>
+                <span>${ products.cart.reduce((sum, product) => sum + parseFloat(product.price.substring(1).replace(',','')), 0) }</span>
             </div>
         </Wrapper>
     )

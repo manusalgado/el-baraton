@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-    width: 250px;
+    width: 100%;
     border: 2px solid #e53935;
     border-radius: 4px;
     margin-top: 20px;
@@ -39,6 +39,7 @@ export const Wrapper = styled.div`
             position: relative;
             background-color: transparent;
             border: none;
+            cursor: pointer;
         }
     }
     .Wrapper__empty {

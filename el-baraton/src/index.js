@@ -9,11 +9,17 @@ import reducer from './reducer/index'
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
+import { loadState, saveState } from './localStorage'
 
-
-const store = createStore(reducer, window.STATE_FROM_SERVER, composeWithDevTools(applyMiddleware(thunkMiddleware)))
+const persistedState = loadState()
+const store = createStore(reducer, persistedState, composeWithDevTools(applyMiddleware(thunkMiddleware)))
 console.log(store.getState())
 
+store.subscribe(() => {
+  saveState({
+   products: store.getState().products
+  })
+})
 ReactDOM.render(
     <Provider store={store}>
       <App />
