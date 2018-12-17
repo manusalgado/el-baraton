@@ -6,9 +6,9 @@ const Nav = ({categories}) => {
     return (
         <div>
             <nav className="red darken-1">
-            <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">El Baratón</a>
-                <ul class="right hide-on-med-and-down">
+            <div className="nav-wrapper">
+                <a href="#!" className="brand-logo">El Baratón</a>
+                <ul className="right hide-on-med-and-down">
                 {categories.map(categorie => (
                     <li key={categorie.id}><a href="#">{categorie.name}</a></li>
                 ))}
