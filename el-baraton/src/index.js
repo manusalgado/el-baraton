@@ -10,16 +10,17 @@ import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
 import { loadState, saveState } from './localStorage'
+import throttle from 'lodash/throttle'
 
 const persistedState = loadState()
 const store = createStore(reducer, persistedState, composeWithDevTools(applyMiddleware(thunkMiddleware)))
 console.log(store.getState())
 
-store.subscribe(() => {
+store.subscribe(throttle(() => {
   saveState({
    products: store.getState().products
   })
-})
+}, 1000))
 ReactDOM.render(
     <Provider store={store}>
       <App />

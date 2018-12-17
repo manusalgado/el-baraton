@@ -45,7 +45,7 @@ const receiveProducts = response => ({
 
 const receiveCategories = response => ({
   type: actionsType.RECEIVE_CATEGORIES,
-  categories: response.data
+  products: response.data
 })
 
 export const loading = () => {
