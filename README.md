@@ -19,7 +19,7 @@ $ npm --version
 
 ## Install El Baraton Test
 
-$ git clone git@github.com:manusalgado/el-baraton
+$ git clone https://github.com/manusalgado/el-baraton.git
 
 $ cd el-baraton
 
