@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Product = styled.div`
+    padding: 10px;
     margin: 20px 0;
 		border-radius: 2.36px;	
 		background-color: #FFFFFF;	
