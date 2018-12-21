@@ -3,7 +3,6 @@ npm-debug.log
 test-results.xml
 .DS_Store
 dist
-build/
 *.swp
 componentsIndex.js
 .idea/
