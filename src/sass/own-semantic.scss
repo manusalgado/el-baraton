@@ -1,0 +1,17 @@
+.ui.menu {
+    border: none;
+    background-color: #E53935;
+}
+.ui.dropdown>.text {
+    color: #ffffff;
+    font-weight: bold;
+}
+.ui.dropdown>.dropdown.icon:before {
+    color: #ffffff;
+}
+.ui.menu .dropdown.item .menu {
+    background-color: #E53935;
+}
+.ui.menu .ui.dropdown.item .menu .item:not(.filtered) {
+    color: #ffffff!important;
+}

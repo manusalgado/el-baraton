@@ -5,6 +5,7 @@ export const MobileNav = styled.ul`
     text-align: center;
     background-color: #e53935;
     margin: 0;
+    padding-top: 60px;
     li {
         padding: 10px;
         font-weight: bold;

@@ -1,0 +1,17 @@
+.carousel {
+    height: 100%!important;
+    .thumbs-wrapper {
+        display: none;
+    }
+}
+.slider {
+    height: 80vh!important;
+}
+@media (max-width: 1024px) {
+    .slider {
+        height: 100%!important;
+    }
+}
+.order-cart {
+    position: relative;
+}
