@@ -1,14 +1,49 @@
 import React from 'react'
 import { Product } from './styles'
 import vino from '../../assets/images/vino.jpg'
+import { Segment, Placeholder, Grid } from 'semantic-ui-react'
 
 const ProductList = ({products, isLoading, error, addToCart}) => {
   console.log('products from product list...', products.products)
   
+  let loadingTheme = [
+    { idLoading: '' },
+    { idLoading: '' },
+    { idLoading: '' },
+    { idLoading: '' },
+    { idLoading: '' },
+    { idLoading: '' }
+  ]
     return (
       <section className="container-fluid">
           <div className="row">
-          {products.products.map(product => (
+          {isLoading ? (
+          <Grid columns={3}>
+            <Grid.Row>
+              {loadingTheme.map(theme => {
+                return (
+                  <Grid.Column>
+                    <Segment raised key={theme.idLoading}>
+                      <Placeholder>
+                        <Placeholder.Header image>
+                          <Placeholder.Line />
+                          <Placeholder.Line />
+                          {theme.idLoading}
+                        </Placeholder.Header>
+                        <Placeholder.Paragraph>
+                          {theme.idLoading}
+                          <Placeholder.Line length='medium' />
+                          <Placeholder.Line length='short' />
+                        </Placeholder.Paragraph>
+                      </Placeholder>
+                    </Segment>
+                  </Grid.Column>
+                )
+              })}
+            </Grid.Row>
+          </Grid>
+        ) : (
+          products.products.map(product => (
             <div className="col s6 m4 l4">
               <Product key={product.id}>
                 <h3>{product.name}</h3>
@@ -31,7 +66,8 @@ const ProductList = ({products, isLoading, error, addToCart}) => {
                 <button className="Product__add-cart" onClick={() => addToCart(product)}>Añadir al Carrito</button>
               </Product>
             </div>
-          ))}
+          ))
+        )}
           </div>
       </section>
     )
