@@ -64,6 +64,17 @@ export const Product = styled.div`
 			font-weight: 700;
 			cursor:pointer;
 		}
+		.Product__add-cart-no {
+			border-radius: 4px;
+			border: none;
+			background-color: rgba(223,3,20,0.5);
+			color: #ffffff;
+			padding: 10px;
+			display: block;
+			margin: auto;
+			font-weight: 700;
+			cursor:default;
+		}
     transition: 300ms;
     &:hover {
     transition: 0.2s ease-in;

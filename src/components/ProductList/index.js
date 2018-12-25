@@ -63,7 +63,11 @@ const ProductList = ({products, isLoading, error, addToCart}) => {
                   </div> }
                 </div>
                 <span className="Product__price">Precio: {product.price}</span>
-                <button className="Product__add-cart" onClick={() => addToCart(product)}>Añadir al Carrito</button>
+                {product.available ? 
+                  <button className="Product__add-cart" onClick={() => addToCart(product)}>Añadir al Carrito</button> 
+                  : 
+                  <button className="Product__add-cart-no" >No disponible</button>}
+          
               </Product>
             </div>
           ))
