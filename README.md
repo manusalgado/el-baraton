@@ -1,4 +1,6 @@
-#Demo: https://pacific-oasis-63974.herokuapp.com/
+#Demo: * Open demo and refresh the page
+
+https://pacific-oasis-63974.herokuapp.com/
 
 # El Baraton Test
 ## Requirements
